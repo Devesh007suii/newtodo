@@ -16,6 +16,6 @@ cloudinary.config({
 // we should always connect database after connecting config
 connectDatabase();
 
-app.listen(4000, () => {
-    console.log("Server is running on PORT " + process.env.PORT);
+app.listen(process.env.PORT || 4000, () => {
+    console.log("Server is running on PORT " + process.env.PORT || 4000);
 })
